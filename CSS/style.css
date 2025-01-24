@@ -46,7 +46,7 @@ body {
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    gap: 25px;
     width: 1487px;
     height: 963px; 
     background-image: url(../IMG/cork.png);
@@ -65,13 +65,22 @@ body {
     border: 1px solid black;
     text-align: start;
     padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.card:hover {
+
+    transform: translateY(-10px) scale(1.05) rotate(10deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0,3);
+    cursor: pointer;
 
 }
 
 /* Regole container-img  */
 .container-img {
 
-    position: relative;
     height: 600px;
     width: 100%;
     background-image: url(../IMG/lizgrin-f-RU2KZDWLzdE-unsplash.jpg);
