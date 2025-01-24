@@ -11,24 +11,39 @@
 /* Regole del Body */
 body {
 
-    height: 100vh;
-    position: relative;
-    background-color: black;
+    /* background-color: black; */
+
+}
+
+/* Regole container-title */
+.container-title {
+
+    text-align: center;
+    align-content: center;
+    width: 1487px;
+    height: 200px;
+    background-color: white;
 
 }
 
 /* Regole container-main */
 .container-main {
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1487px;
-    height: 963px;
-    background-image: url(../IMG/cork.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
 
 }
 
+/* Regole container-card */
+.container-card {
 
-/* Regole */
+    width: 1487px;
+    height: 963px;
+    background-image: url(../IMG/cork.png);
+    background-size: cover;
+
+}
