@@ -41,17 +41,17 @@ const photoData = [
 // debugging
 // console.table(photoData);
 
-// Funzione per creare dinamicamente le card con le immagini
-function createCards(photoArray) {
+// Funzione per creare le card e inserirle nel DOM
+function generateCards() {
 
-    const container = document.querySelector(container - card);
+    // Seleziono l'elemento con la classe "container-card"
+    const container = document.querySelector('.container-card');
 
-    // Itera sull'array di foto e crea una card per ogni immagine
-    for (let i = 0; i < photoArray.length; i++) {
+    // Itero sull'array di foto usando una funzione
+    photoData.forEach(function(photo) {
 
-        const photo = photoArray[i];
+        
 
     }
-
 
 }
