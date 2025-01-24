@@ -7,11 +7,10 @@
 }
 
 /* REGOLE CONTAINERS */
+
 /* Regole del Body */
 body {
 
-    height: 100%;
-    width: 100%;
     background-color: black;
 
 }
@@ -20,9 +19,7 @@ body {
 .container-title {
 
     text-align: center;
-    align-content: center;
-    width: 100%;
-    max-width: 50vw;
+    width: 50%;
     background-image: url(../IMG/wall.png);
     background-position: center;
 
@@ -31,46 +28,51 @@ body {
 /* Regole container-main */
 .container-main {
 
+    /* imposto il layout a flexbox per disporre i figli in modo flessibile verticalmente*/ 
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    min-height: 100vh;
 
 }
 
 /* Regole container-card */
 .container-card {
 
+    /* Imposto il layout come una griglia (orizzontalmente) */
     display: grid;
     justify-content: center;
+    /* Creo 3 colonne di dimensione uguale (1fr= frazione di spazio) */
     grid-template-columns: repeat(3, 1fr);
+    /* Creo 2 righe di dimensione uguale */
     grid-template-rows: repeat(2, 1fr);
     gap: 1vw;
-    width: 100%;
     max-width: 50vw;
     background-image: url(../IMG/cork.png);
     background-position: center;
-    padding: 3vw 6vw;
+    padding: 3vw 8vw;
 
 }
 
 /* Regole delle card */
 .card {
 
+    /* Metto in position relative card per poter mettere in posizione assoluta pin */
     position: relative;
     display: flex;
     flex-direction: column;
     background-color: white;
     text-align: start;
     padding: 0.6vw;
+    /* Aggiungo una transizione per la trasformazione e l'ombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* ombra leggera della card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 
 }
 
 .card:hover {
 
+    /* trasformazione e rotazione parziale dlla card */
     transform: translateY(-10px) scale(1.05) rotate(10deg);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0, 3);
     cursor: pointer;
@@ -83,45 +85,39 @@ body {
     display: flex;
     justify-content: center;
     height: 11vw;
-    width: 11vw;
+    /* nel caso in cui l'immagine dovesse uscire dai bordi verrebbe nascosta*/
     overflow: hidden;
 
 }
-
-.container-img img {
-
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
-
-}
-
-/* regole pin */
-.pin {
-
-    position: absolute;
-    top: -0.8vw;
-    left: 50%;
-    transform: translate(-50%);
-    width: 1.5vw;
-    z-index: 9999;
-
-}
-
 
 /* Regole content */
 .content {
 
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: auto;
     background-color: white;
 
 }
 
 
 /* REGOLE ELEMENTI */
+
+/* regole pin */
+.pin {
+
+    position: absolute;
+    /* Posiziono il pin a una distanza di -0.8 dal margine superiore della card  */
+    top: -0.8vw;
+    /* Centro il pin orizzontalmente */
+    left: 50%;
+    /* Centro il pin esattamente a metà rispetto alla sua larghezza */
+    transform: translate(-50%);
+    width: 1.5vw;
+
+    z-index: 9999;
+
+}
+
 
 /* Titoli */
 h1,
@@ -156,20 +152,20 @@ span {
 
 
 /* RESPONSIVE */
-/* Media Queries per dispositivi più piccoli */
 
 /* TABLET */
 @media (max-width: 768px) {
 
     .container-title {
 
-        max-width: 100vw;
+        width: 100vw;
 
     }
 
     .container-card {
 
         max-width: 100vw;
+        /* Le colonne diventeranno da 3 a 2 */
         grid-template-columns: repeat(2, 1fr);
         padding: 6vw;
         gap: 4vw;
@@ -191,7 +187,7 @@ span {
 
     .pin {
 
-        top: -1.7vw;
+        top: -2vw;
         width: 4.5vw;
 
     }
@@ -221,6 +217,8 @@ span {
 
     .container-card {
 
+        width: 100vw;
+        /* Le colonne diventeranno da 2 a 1 */
         grid-template-columns: 1fr;
         padding: 10vw;
 
@@ -244,6 +242,7 @@ span {
     .container-img img {
 
         margin-top: 5px;
+        /* Mantengo l'immagine all'interno del contenitore senza tagliarla  */
         object-fit: contain;
 
     }
@@ -251,11 +250,17 @@ span {
     .pin {
 
         position: absolute;
-        top: -3.5vw;
+        top: -3.8vw;
         left: 50%;
         transform: translateX(-50%);
-        width: 7.5vw;
+        width: 8vw;
         z-index: 9999;
+
+    }
+
+    .content {
+
+        margin-left: 3vw;
 
     }
 
