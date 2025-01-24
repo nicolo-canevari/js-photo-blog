@@ -80,8 +80,8 @@ body {
 /* Regole container-img  */
 .container-img {
 
-    height: 10vw;
-    width: 100%;
+    height: 11vw;
+    width: 11vw;
     /* background-image: url(../IMG/lizgrin-f-RU2KZDWLzdE-unsplash.jpg); */
     background-position: center;
     background-size: cover;
@@ -184,7 +184,8 @@ span {
 
     .container-img {
 
-        height: 40vw;
+        height: 45vw;
+        width: 40vw;
 
     }
 
@@ -235,6 +236,7 @@ span {
     .container-img {
 
         height: 70vw;
+        width: 75vw;
 
     }
 
@@ -254,7 +256,7 @@ span {
 
     h2 {
 
-        font-size: 6vw;
+        font-size: 8vw;
 
     }
 
