@@ -81,12 +81,20 @@ function generateCards() {
 
         // Inserimento del titolo della foto
         const title = document.createElement('h2');
-        date.textContent = photo.title;
+        title.textContent = photo.title;
 
         content.appendChild(date);
         content.appendChild(title);
 
+        // Aggiunta dell'immagine e del testo alla card
+        card.appendChild(imgContainer);
+        card.appendChild(content);
 
-    }
+        // Aggiunta della card al contenitore del main
+        container.appendChild(card);
+
+    });
 
 }
+
+generateCards();
