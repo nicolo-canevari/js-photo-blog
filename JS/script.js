@@ -1,5 +1,5 @@
 // array oggetti
-[
+const photoData = [
     {
         "id": 1,
         "title": "Skate Park",
@@ -37,3 +37,21 @@
         "url": "https://marcolanci.it/boolean/assets/pictures/6.png"
     }
 ]
+
+// debugging
+// console.table(photoData);
+
+// Funzione per creare dinamicamente le card con le immagini
+function createCards(photoArray) {
+
+    const container = document.querySelector(container - card);
+
+    // Itera sull'array di foto e crea una card per ogni immagine
+    for (let i = 0; i < photoArray.length; i++) {
+
+        const photo = photoArray[i];
+
+    }
+
+
+}
