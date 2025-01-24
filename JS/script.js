@@ -50,7 +50,42 @@ function generateCards() {
     // Itero sull'array di foto usando una funzione
     photoData.forEach(function(photo) {
 
-        
+        // creo un nuovo elemento e gli aggiungo una classe
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        // Container dell'immagine
+        const imgContainer = document.createElement('div');
+        imgContainer.classList.add('container-img')
+
+        // Creo l'elemento <img> dinamicamente aggiungendolo al DOM
+        const img = document.createElement('img');
+        img.src = photo.url;
+        img.alt = photo.title;
+        imgContainer.appendChild(img);
+
+        // Aggiunta del pin
+        const pin = document.createElement('img');
+        pin.src = './IMG/pin.svg';
+        pin.alt = 'Pin';
+        pin.classList.add('pin');
+        imgContainer.appendChild(pin);
+
+        // Contenuto del testo
+        const content = document.createElement('div');
+        content.classList.add('content');
+
+        // Inserimento della "data"
+        const date = document.createElement('span');
+        date.textContent = photo.date;
+
+        // Inserimento del titolo della foto
+        const title = document.createElement('h2');
+        date.textContent = photo.title;
+
+        content.appendChild(date);
+        content.appendChild(title);
+
 
     }
 
