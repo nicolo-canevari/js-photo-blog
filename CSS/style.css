@@ -182,9 +182,9 @@ span {
 .fullscreen-close {
 
     position: absolute;
-    top: 10px;
+    top: -20px;
     right: 10px;
-    font-size: 2rem;
+    font-size: 3.5rem;
     color: white;
     cursor: pointer;
     z-index: 10000;

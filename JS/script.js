@@ -48,7 +48,7 @@ function generateCards() {
     const container = document.querySelector('.container-card');
 
     // Itero sull'array di foto usando una funzione
-    photoData.forEach(function(photo) {
+    photoData.forEach(function (photo) {
 
         // creo un nuovo elemento e gli aggiungo una classe
         const card = document.createElement('div');
@@ -91,10 +91,64 @@ function generateCards() {
         card.appendChild(imgContainer);
         card.appendChild(content);
 
+        // Aggiungo l'evento di clic sull'immagine
+        img.addEventListener('click', function() {
+            
+            showFullscreenImage(photo.url);
+
+        });
+
         // Aggiunta della card al contenitore del main
         container.appendChild(card);
 
     });
+
+}
+
+// Funzione per visualizzare l'immagine a schermo intero
+function showFullscreenImage(url) {
+
+    // Creo l'overlay per il fullscreen
+    const overlay = document.createElement('div');
+    overlay.classList.add('fullscreen-overlay');
+
+    // Creo il contenitore dell'immagine fullscreen
+    const fullscreenImgContainer = document.createElement('div');
+    fullscreenImgContainer.classList.add('fullscreen-image');
+
+    // Creo l'elemento immagine
+    const img = document.createElement('img');
+    img.src = url;
+    img.alt = 'Fullscreen Image';
+
+    // Aggiungo l'immagine al suo contenitore
+    fullscreenImgContainer.appendChild(img);
+
+    // Creo la X per chiudere l'immagine
+    const closeBtn = document.createElement('span');
+    closeBtn.classList.add('fullscreen-close');
+    closeBtn.textContent = 'X';
+
+    // Funzione per chiudere l'overlay
+    closeBtn.addEventListener('click', function() {
+
+        closeFullscreen(overlay);
+
+    });
+
+    // Aggiungo la X al contenitore dell'immagine
+    fullscreenImgContainer.appendChild(closeBtn);
+
+    // Aggiungo l'immagine e l'overlay al body
+    overlay.appendChild(fullscreenImgContainer);
+    document.body.appendChild(overlay);
+
+}
+
+// Funzione per chiudere l'immagine a schermo intero
+function closeFullscreen(overlay) {
+
+    document.body.removeChild(overlay);
 
 }
 
