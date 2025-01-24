@@ -83,6 +83,7 @@ function generateCards() {
         const title = document.createElement('h2');
         title.textContent = photo.title;
 
+        // Aggiunta della data e del titolo(h2) al contenuto
         content.appendChild(date);
         content.appendChild(title);
 
@@ -97,4 +98,5 @@ function generateCards() {
 
 }
 
+// Chiamata della funzione per generare le card
 generateCards();
