@@ -80,6 +80,8 @@ body {
 /* Regole container-img  */
 .container-img {
 
+    display: flex;
+    justify-content: center;
     height: 11vw;
     width: 11vw;
     overflow: hidden;
@@ -208,7 +210,7 @@ span {
 
     span {
 
-        font-size: 2vh;
+        font-size: 3vw;
 
     }
 
@@ -225,9 +227,10 @@ span {
     }
 
     .card {
-
+   
         padding: 4vw;
         margin-bottom: 3vw;
+        position: relative;
 
     }
 
@@ -238,10 +241,21 @@ span {
 
     }
 
+    .container-img img {
+
+        margin-top: 5px;
+        object-fit: contain;
+
+    }
+
     .pin {
 
-        top: -2.9vw;
+        position: absolute;
+        top: -3.5vw;
+        left: 50%;
+        transform: translateX(-50%);
         width: 7.5vw;
+        z-index: 9999;
 
     }
 
@@ -260,7 +274,7 @@ span {
 
     span {
 
-        font-size: 2.5vh;
+        font-size: 5.5vw;
 
     }
 
