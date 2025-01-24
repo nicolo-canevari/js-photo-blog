@@ -7,6 +7,14 @@
 }
 
 /* REGOLE CONTAINERS */
+/* Regole del Body */
+body {
+
+    height: 100%;
+    width: 100%;
+    background-color: black;
+
+}
 
 /* Regole container-title */
 .container-title {
@@ -27,7 +35,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: black;
+    min-height: 100vh;
 
 }
 
@@ -91,10 +99,10 @@
 .pin {
 
     position: absolute;
-    top: -1vw;
+    top: -0.8vw;
     left: 50%;
     transform: translate(-50%);
-    width: 2vw;
+    width: 1.5vw;
     z-index: 9999;
 
 }
@@ -180,6 +188,13 @@ span {
 
     }
 
+    .pin {
+
+        top: -1.7vw;
+        width: 4vw;
+
+    }
+
     h1 {
 
         font-size: 13vw;
@@ -222,6 +237,14 @@ span {
         height: 70vw;
 
     }
+
+    .pin {
+
+        top: -2.9vw;
+        width: 7vw;
+
+    }
+
 
     h1 {
 
