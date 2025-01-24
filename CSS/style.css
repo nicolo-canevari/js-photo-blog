@@ -21,8 +21,9 @@ body {
     text-align: center;
     align-content: center;
     width: 1487px;
-    height: 200px;
-    background-color: white;
+    height: 100px;
+    background-image: url(../IMG/wall.png);
+    background-size: cover;
 
 }
 
@@ -41,9 +42,61 @@ body {
 /* Regole container-card */
 .container-card {
 
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
     width: 1487px;
-    height: 963px;
+    height: 963px; 
     background-image: url(../IMG/cork.png);
     background-size: cover;
+    padding: 30px 60px;
 
 }
+
+/* Regole delle card */
+.card {
+
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid black;
+    text-align: start;
+    padding: 20px;
+
+}
+
+/* Regole container-img  */
+.container-img {
+
+    position: relative;
+    height: 600px;
+    width: 100%;
+    background-image: url(../IMG/lizgrin-f-RU2KZDWLzdE-unsplash.jpg);
+    overflow: hidden;
+
+}
+
+.container-img img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* Regole content */
+.content {
+
+    background-color: white;
+    padding: 10px;
+
+}
+
+
+/* REGOLE ELEMENTI */
+
+
+
