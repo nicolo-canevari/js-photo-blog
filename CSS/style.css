@@ -34,8 +34,9 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: black;
+    padding: 20px, 0;
 
 }
 
@@ -48,7 +49,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
     gap: 25px;
     width: 1487px;
-    height: 963px; 
+    height: auto;
     background-image: url(../IMG/cork.png);
     background-size: cover;
     padding: 50px 150px;
@@ -67,13 +68,13 @@ body {
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    
+
 }
 
 .card:hover {
 
     transform: translateY(-10px) scale(1.05) rotate(10deg);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0,3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0, 3);
     cursor: pointer;
 
 }
@@ -81,9 +82,11 @@ body {
 /* Regole container-img  */
 .container-img {
 
-    height: 600px;
+    height: 300px;
     width: 100%;
     background-image: url(../IMG/lizgrin-f-RU2KZDWLzdE-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
 
 }
@@ -109,18 +112,78 @@ body {
 
 
 /* REGOLE ELEMENTI */
-h1, h2 {
 
-    font-family: "Edu TAS Beginner", serif;
-    
+/* Titoli */
+h1 {
+
+    font-size: 70px;
+
 }
 
+h2 {
+
+    font-size: 24px;
+
+}
+
+h1,
+h2 {
+
+    font-family: "Edu TAS Beginner", serif;
+
+}
+
+/* Date */
 span {
 
+    font-size: 16px;
     padding-top: 20px;
     color: lightslategray;
     font-family: "Sometype Mono", monospace;
-    
+
 }
 
+/* RESPONSIVE */
+/* Media Queries per dispositivi più piccoli */
 
+/* TABLET */
+@media (max-width: 768px) {
+
+    .container-card {
+
+        grid-template-columns: 1fr 1fr;
+        padding: 30px;
+
+    }
+
+    .container-title {
+
+        font-size: 80px;
+
+    }
+
+    .container-img {
+
+        height: 300px;
+
+    }
+
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+
+    .container-card {
+
+        grid-template-columns: 1fr;
+        padding: 10px;
+
+    }
+
+    .container-img {
+
+        height: 400px;
+
+    }
+
+}
