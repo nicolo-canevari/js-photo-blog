@@ -51,7 +51,7 @@ body {
     height: 963px; 
     background-image: url(../IMG/cork.png);
     background-size: cover;
-    padding: 30px 60px;
+    padding: 50px 150px;
 
 }
 
@@ -90,13 +90,30 @@ body {
 /* Regole content */
 .content {
 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
     background-color: white;
-    padding: 10px;
 
 }
 
 
 /* REGOLE ELEMENTI */
+h1 h2 {
 
+    font-family: "Edu TAS Beginner", sans-serif;
+    
+
+}
+
+span {
+
+    padding-top: 20px;
+    color: lightslategray;
+    font-family: "Sometype Mono", monospace;
+    
+
+}
 
 
