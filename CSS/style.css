@@ -82,16 +82,15 @@ body {
 
     height: 11vw;
     width: 11vw;
-    /* background-image: url(../IMG/lizgrin-f-RU2KZDWLzdE-unsplash.jpg); */
-    background-position: center;
-    background-size: cover;
     overflow: hidden;
 
 }
 
 .container-img img {
 
-    object-fit: cover;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
 
 }
 
@@ -127,7 +126,6 @@ h1,
 h2 {
 
     font-family: "Edu TAS Beginner", serif;
-    margin-bottom: 1vw;
 
 }
 
@@ -192,7 +190,7 @@ span {
     .pin {
 
         top: -1.7vw;
-        width: 4vw;
+        width: 4.5vw;
 
     }
 
@@ -243,7 +241,7 @@ span {
     .pin {
 
         top: -2.9vw;
-        width: 7vw;
+        width: 7.5vw;
 
     }
 
