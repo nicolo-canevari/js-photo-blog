@@ -80,7 +80,27 @@ function generateCards(photoData) {
     // Itero sull'array di foto usando una funzione
     photoData.forEach(function (photo) {
 
-        // creo un nuovo elemento e gli aggiungo una classe
+        // Destructuring degli oggetti all'interno di photoData
+        // photoData.forEach(function ({ url, title, date }) {
+
+        // Inserimento della card nell'html usando inner.Html
+        // const cardHTML = `
+        //     <div class="card">
+        //         <div class="container-img">
+        //           <img src="${photo.url}" alt="${photo.title}">
+        //           <img src="./IMG/pin.svg" alt="Pin" class="pin">
+        //         </div>
+        //         <div class="content">
+        //           <span>${photo.date}</span>
+        //           <h2>${photo.title}</h2>
+        //         </div>
+        //     </div>
+        // `;
+
+        // Aggiungo la card al contenitore
+        // container.innerHTML += cardHTML;
+
+        // Creo un nuovo elemento e gli aggiungo una classe
         const card = document.createElement('div');
         card.classList.add('card');
 
@@ -121,7 +141,7 @@ function generateCards(photoData) {
         card.appendChild(imgContainer);
         card.appendChild(content);
 
-        // Aggiungo l'evento di clic sull'immagine
+        // Aggiungo l'evento di click sull'immagine
         img.addEventListener('click', function () {
 
             showFullscreenImage(photo.url);
