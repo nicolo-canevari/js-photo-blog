@@ -45,6 +45,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     /* Creo 2 righe di dimensione uguale */
     grid-template-rows: repeat(2, 1fr);
+    /* Ho usato viewport width per rendere il più flessibile possibile il layout */
     gap: 1vw;
     max-width: 50vw;
     background-image: url(../IMG/cork.png);
@@ -117,6 +118,14 @@ body {
     width: 1.5vw;
     /* Sovrapposizione degli elementi nella pagina di layout, questo elemento verrà visualizzato sopra gli altri */
     z-index: 1000;
+
+}
+
+/* Quando la card è in hover, il pin scompare */
+.card:hover .pin {
+
+    /* Imposto opacità a 0 per far scomparire il pin più fluido */
+    opacity: 0;
 
 }
 
@@ -195,8 +204,10 @@ span {
 .fullscreen-close {
 
     position: absolute;
-    top: -20px;
-    right: 10px;
+    top: 0px;
+    right: 20px;
+    /* Root em in questo caso è 3 volte la dimensione di default settata dal browser (16px) */
+    /* Come vw la uso per rendere responsivo il contenuto della pagina */
     font-size: 3rem;
     color: white;
     cursor: pointer;
@@ -252,6 +263,14 @@ span {
 
     }
 
+    .fullscreen-close {
+
+        top: 70px;
+        right: 15px;
+        font-size: 2.5rem;
+
+    }
+
     .pin {
 
         top: -2vw;
@@ -302,7 +321,7 @@ span {
     .container-img {
 
         height: 70vw;
-        width: 75vw;
+        width: 77vw;
 
     }
 
@@ -327,6 +346,13 @@ span {
 
     }
 
+    .fullscreen-close {
+
+        top: 120px;
+        right: 15px;
+        font-size: 2rem;
+
+    }
 
     .pin {
 

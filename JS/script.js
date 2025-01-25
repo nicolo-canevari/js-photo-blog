@@ -48,7 +48,7 @@ function fetchPhotos() {
     const apiUrl = "https://lanciweb.github.io/demo/api/pictures/";
 
 
-    // Uso di axios per ottenere i dati
+    // Uso di axios per ottenere i dati attraverso il metodo GET
     axios.get(apiUrl)
         .then(function (response) {
 
@@ -110,7 +110,9 @@ function generateCards(photoData) {
 
         // Creo l'elemento <img> dinamicamente aggiungendolo al DOM
         const img = document.createElement('img');
+        // Imposto l'URL dell'immagine
         img.src = photo.url;
+        // Imposto il testo alternativo per l'immagine
         img.alt = photo.title;
         imgContainer.appendChild(img);
 
