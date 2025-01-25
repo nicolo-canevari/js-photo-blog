@@ -181,6 +181,16 @@ span {
 
 }
 
+/* Regole dell'img in fullscreen */
+.fullscreen-image img {
+
+    width: 100%;
+    height: 100%;
+    /* Adatto l'immagine al suo contenitore senza tagliarlo */
+    object-fit: contain;
+
+}
+
 /* X per uscire dall'immagine */
 .fullscreen-close {
 
@@ -193,6 +203,7 @@ span {
     z-index: 10000;
 
 }
+
 
 /* RESPONSIVE */
 
@@ -225,6 +236,19 @@ span {
 
         height: 45vw;
         width: 40vw;
+
+    }
+
+    .fullscreen-image {
+
+        width: 90vw;
+        height: 70vh;
+
+    }
+
+    .fullscreen-image img {
+
+        object-fit: contain;
 
     }
 
@@ -289,6 +313,20 @@ span {
         object-fit: contain;
 
     }
+
+    .fullscreen-image {
+
+        width: 95vw;
+        height: 60vh;
+
+    }
+
+    .fullscreen-image img {
+
+        object-fit: contain;
+
+    }
+
 
     .pin {
 
