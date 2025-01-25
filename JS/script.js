@@ -1,48 +1,78 @@
 // array oggetti
-const photoData = [
-    {
-        "id": 1,
-        "title": "Skate Park",
-        "date": "01-07-2024",
-        "url": "https://marcolanci.it/boolean/assets/pictures/1.png"
-    },
-    {
-        "id": 2,
-        "title": "Passeggiata",
-        "date": "16-07-2024",
-        "url": "https://marcolanci.it/boolean/assets/pictures/2.png"
-    },
-    {
-        "id": 3,
-        "title": "Alpi",
-        "date": "01-07-2024",
-        "url": "https://marcolanci.it/boolean/assets/pictures/3.png"
-    },
-    {
-        "id": 4,
-        "title": "Sagra",
-        "date": "21-08-2024",
-        "url": "https://marcolanci.it/boolean/assets/pictures/4.png"
-    },
-    {
-        "id": 5,
-        "title": "Watergun",
-        "date": "23-08-2024",
-        "url": "https://marcolanci.it/boolean/assets/pictures/5.png"
-    },
-    {
-        "id": 6,
-        "title": "Riviera",
-        "date": "30-08-2024",
-        "url": "https://marcolanci.it/boolean/assets/pictures/6.png"
-    }
-]
+// const photoData = [
+//     {
+//         "id": 1,
+//         "title": "Skate Park",
+//         "date": "01-07-2024",
+//         "url": "https://marcolanci.it/boolean/assets/pictures/1.png"
+//     },
+//     {
+//         "id": 2,
+//         "title": "Passeggiata",
+//         "date": "16-07-2024",
+//         "url": "https://marcolanci.it/boolean/assets/pictures/2.png"
+//     },
+//     {
+//         "id": 3,
+//         "title": "Alpi",
+//         "date": "01-07-2024",
+//         "url": "https://marcolanci.it/boolean/assets/pictures/3.png"
+//     },
+//     {
+//         "id": 4,
+//         "title": "Sagra",
+//         "date": "21-08-2024",
+//         "url": "https://marcolanci.it/boolean/assets/pictures/4.png"
+//     },
+//     {
+//         "id": 5,
+//         "title": "Watergun",
+//         "date": "23-08-2024",
+//         "url": "https://marcolanci.it/boolean/assets/pictures/5.png"
+//     },
+//     {
+//         "id": 6,
+//         "title": "Riviera",
+//         "date": "30-08-2024",
+//         "url": "https://marcolanci.it/boolean/assets/pictures/6.png"
+//     }
+// ]
 
 // debugging
 // console.table(photoData);
 
-// Funzione per creare le card e inserirle nel DOM
-function generateCards() {
+// Funzione per ottenere i dati tramite axios e generare le card
+function fetchPhotos() {
+
+    // URL dell'API da cui otteniamo i dati
+    const apiUrl = "https://lanciweb.github.io/demo/api/pictures/";
+
+
+    // Uso di axios per ottenere i dati
+    axios.get(apiUrl)
+        .then(function (response) {
+
+            // Quando la richiesta è riuscita, i dati sono nella proprietà "data" della risposta
+            const photoData = response.data;
+
+            // Chiamo la funzione per generare le card con i dati ottenuti
+            generateCards(photoData);
+
+        })
+
+        .catch(function (error) {
+
+            // Stampo in console in caso di errore
+            console.error("Errore nel caricamento dei dati:", error);
+
+        });
+
+}
+
+
+// Funzione per creare le card e inserirle nel DOM 
+// Se voglio attingere gli oggetti da un array basta fare generateCards()
+function generateCards(photoData) {
 
     // Seleziono l'elemento con la classe "container-card"
     const container = document.querySelector('.container-card');
@@ -92,8 +122,8 @@ function generateCards() {
         card.appendChild(content);
 
         // Aggiungo l'evento di clic sull'immagine
-        img.addEventListener('click', function() {
-            
+        img.addEventListener('click', function () {
+
             showFullscreenImage(photo.url);
 
         });
@@ -130,7 +160,7 @@ function showFullscreenImage(url) {
     closeBtn.textContent = 'X';
 
     // Funzione per chiudere l'overlay
-    closeBtn.addEventListener('click', function() {
+    closeBtn.addEventListener('click', function () {
 
         closeFullscreen(overlay);
 
@@ -153,4 +183,7 @@ function closeFullscreen(overlay) {
 }
 
 // Chiamata della funzione per generare le card
-generateCards();
+// generateCards();
+
+// Chiamata della funzione per ottenere le foto dal server e generare le card
+fetchPhotos();
