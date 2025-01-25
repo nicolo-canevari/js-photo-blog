@@ -28,7 +28,7 @@ body {
 /* Regole container-main */
 .container-main {
 
-    /* imposto il layout a flexbox per disporre i figli in modo flessibile verticalmente*/ 
+    /* imposto il layout a flexbox per disporre i figli in modo flessibile verticalmente*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,6 +67,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* ombra leggera della card */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 
 }
 
@@ -74,8 +75,9 @@ body {
 
     /* trasformazione e rotazione parziale dlla card */
     transform: translateY(-10px) scale(1.05) rotate(10deg);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0, 3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0, 3);
     cursor: pointer;
+    z-index: 10;
 
 }
 
@@ -113,6 +115,7 @@ body {
     /* Centro il pin esattamente a metà rispetto alla sua larghezza */
     transform: translate(-50%);
     width: 1.5vw;
+    /* Sovrapposizione degli elementi nella pagina di layout, questo elemento verrà visualizzato sopra gli altri */
     z-index: 1000;
 
 }
@@ -265,7 +268,7 @@ span {
     }
 
     .card {
-   
+
         padding-top: 4vw;
         margin-bottom: 3vw;
         position: relative;

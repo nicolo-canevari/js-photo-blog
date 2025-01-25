@@ -83,7 +83,7 @@ function generateCards(photoData) {
         // Destructuring degli oggetti all'interno di photoData
         // photoData.forEach(function ({ url, title, date }) {
 
-        // Inserimento della card nell'html usando inner.Html
+        // Inserimento della card nell'html usando inner.HTML
         // const cardHTML = `
         //     <div class="card">
         //         <div class="container-img">
