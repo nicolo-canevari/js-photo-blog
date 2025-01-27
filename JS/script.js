@@ -177,9 +177,9 @@ function showFullscreenImage(url) {
     fullscreenImgContainer.appendChild(img);
 
     // Creo la X per chiudere l'immagine
-    const closeBtn = document.createElement('span');
+    const closeBtn = document.createElement('button');
     closeBtn.classList.add('fullscreen-close');
-    closeBtn.textContent = 'X';
+    closeBtn.textContent = 'Chiudi';
 
     // Funzione per chiudere l'overlay
     closeBtn.addEventListener('click', function () {
