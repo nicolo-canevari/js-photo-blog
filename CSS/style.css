@@ -67,7 +67,7 @@ body {
     /* Aggiungo una transizione per la trasformazione e l'ombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* ombra leggera della card */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 1;
 
 }
@@ -76,7 +76,7 @@ body {
 
     /* trasformazione e rotazione parziale dlla card */
     transform: translateY(-10px) scale(1.05) rotate(10deg);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0, 3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 1);
     cursor: pointer;
     z-index: 10;
 
@@ -177,6 +177,13 @@ span {
     z-index: 9999;
     /* Sfoca lo sfondo */
     backdrop-filter: blur(10px);
+
+}
+
+/* Classe per nascondere l'overlay */
+.hidden {
+
+    display: none;
 
 }
 

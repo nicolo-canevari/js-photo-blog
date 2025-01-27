@@ -200,7 +200,8 @@ function showFullscreenImage(url) {
 // Funzione per chiudere l'immagine a schermo intero
 function closeFullscreen(overlay) {
 
-    document.body.removeChild(overlay);
+    // Aggiungo la classe "hidden" all'overlay
+    overlay.classList.add('hidden');
 
 }
 
